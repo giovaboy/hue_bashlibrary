@@ -246,12 +246,17 @@ function hue_onoff() {
 	done
 }
 
-# Function hue_allof: turn all lights off (group 0)
+# Function hue_alloff: turn all lights off (group 0)
 
 function hue_alloff {
 	hue_put "{ \"on\": false }" "groups/0/action"
 }
 
+# Function hue_allon: turn all lights on (group 0)
+
+function hue_allon {
+	hue_put "{ \"on\": true }" "groups/0/action"
+}
 
 # Function hue_on_hue_sat_brightness: turns light(s) on with defined starting values (hue/sat/bri)
 # $1 = hue value (0-65535)
